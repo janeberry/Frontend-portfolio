@@ -1,4 +1,4 @@
-# Frontend-portfolio
+# Portfolio Website
 Hi! This portfolio website showcases my projects, skills, and about me.
 
 
