@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif';
+    background-color: black;
+    color: white;
+}
+
+/* header */
+.header{
+    position: fixed;
+    top: 0; left: 0; width: 100%;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: 600;
+}
+.logo span{
+    color: rgb(16, 242, 219);
+}
+.nav a{
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+}
+.nav a:hover,
+.nav a.active{
+    color: rgb(16, 242, 219); 
+}
+
+
+
+/* section1 - Home */
+.HOME{
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    padding: 70px 10% 0;
+    justify-content: space-between;
+}
+.home-content{
+    max-width: 600px;
+    color: white;
+}
+.home-content h1{
+    font-size: 56px;
+    font-weight: 700;
+}
+.home-content h3{
+    font-size: 32px;
+    font-weight: 700;
+}
+.home-content span{
+    color:rgb(16, 242, 219);
+}
+.home-content .buttons{
+    width: 345px;
+    height: 50px;
+}
+.buttons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: rgb(16, 242, 219);
+    border: 2px solid rgb(16, 242, 219);
+    border-radius: 8px;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.buttons a:nth-child(2){
+    background: transparent;
+    color: rgb(16, 242, 219);
+}
+.home-social{ 
+    margin-top: 2.5rem;
+    display: flex;
+    column-gap: 1rem;
+}
+.home-social a i{
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+.home-img {
+    border-radius: 2rem;
+    width: 480px;
+}
+
+
+/* section2 - About */
+.ABOUT{
+    padding: 100px 10% 0;
+}
+.about-content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-img{
+    flex-basis: 35%;
+}
+.about-img img{
+    width: 100%;
+    border-radius: 2rem;
+}
+.about-words{
+    flex-basis: 60%;
+}
+.about-words h2{
+    font-size: 60px;
+    font-weight: 500;
+}
+.about-words p{
+    font-weight: 150;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 150;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: rgb(16, 242, 219) ;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 80%;
+}
+.tab-contents{
+    display: none; 
+}
+.tab-contents.active-tab{
+    display: block;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+    font-weight: 150;
+}
+.tab-contents ul li span{
+    color: rgb(16, 242, 219);
+}
+
+
+
+/* section3 - Skills */
+.SKILLS{
+    padding: 100px 10% 0;
+}
+.SKILLS h2{
+    font-size: 60px;
+    font-weight: 500;
+}
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.skills-data {
+    border: 2px solid rgb(189, 142, 212); /* rgb(144, 239, 229) */
+    border-radius: 30px;
+    width: 250px;
+    margin: 10px;
+    padding: 30px;
+    text-align: left;
+}
+.skills-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.skills-icon {
+    font-size: 2em;
+    margin-right: 10px;
+    color: rgb(16, 242, 219); 
+}
+.skills-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: rgb(144, 239, 229);
+}
+.skills-per {
+    font-size: 1em;
+    color: rgb(223, 220, 220);
+}
+.skills-progress {
+    width: 100%;
+    height: 10px;
+    -webkit-appearance: none;
+    appearance: none;
+}
+.skills-progress::-webkit-progress-bar {
+    background-color: white;
+    border-radius: 5px;
+}
+.skills-progress::-webkit-progress-value {
+    background-color: rgb(181, 118, 212);
+    border-radius: 5px;
+}
+.skills-progress::-moz-progress-bar {
+    background-color: rgb(181, 118, 212);
+    border-radius: 5px;
+}
+
+
+
+
+/* section4 - Projects */
+#projects{
+    padding: 100px 10% 0;
+}
+#projects h2{
+    font-size: 60px;
+    font-weight: 500;
+    text-align: center;
+}
+#projects p{
+    font-size: 15px;
+    font-weight: 100;
+    text-align: center;
+}
+
+/* section5 - Contact */
+#contact{
+    padding: 100px 10% 0;
+}
+#contact h2{
+    font-size: 60px;
+    font-weight: 500;
+}
+.contact-container{
+    display: flex;
+}
+.address{
+    flex-basis: 35%;
+}
+.input-box{
+    flex-basis: 60%;
+}
+.address p{
+    margin-top: 30px;
+    font-weight: 200;
+}
+.address p i{
+    color: rgb(16, 242, 219);
+    margin-right: 15px;
+}
+.input-buttons{
+    width: 150px;
+    height: 50px;
+    background: rgb(16, 242, 219);
+    border: 2px solid rgb(16, 242, 219);
+    border-radius: 10px;
+    font-size: 18px;
+    color: black;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.input-box form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+    background: rgb(46, 46, 46);
+    color: rgb(16, 242, 219);
+    font-size: 16px;
+    border-radius: 10px;
+    border: 0;
+    outline: none;
+}
+.success{
+    color: green ;
+    margin-top: 10px;
+    display: block;
+    font-size: 15px;
+    font-weight: 150;
+    display: none;
+}
+
+
+
+/* footer */
+.footer {
+    text-align: center;
+    padding: 3rem 0;
+}  
+.footer-title {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: gray;
+}
+.footer-link {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+}
+.footer-icon {
+    color: gray;
+    font-size: 20px;
+} 
+.footer-copy {
+    font-size: 15px;
+    font-weight: 200;
+    color: gray;
+}
